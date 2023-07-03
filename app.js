@@ -6,12 +6,12 @@ require('dotenv').config();
 app.get('/', (req, res) => {
   const instanceId = process.env.AWS_INSTANCE_ID;
   const instanceType = process.env.AWS_INSTANCE_TYPE;
-  const projectDescription = 'This is my simple Node.js project';
+  const projectDescription = 'This is my updated simple Node.js project';
 
 
   const html = `<h1>Instance ID: ${instanceId}</h1>
                 <h1>Instance Type: ${instanceType}</h1>;
-		<p>${projectDescription}</p>`;
+		<h1>${projectDescription}</h1>`;
 
 
   res.send(html);
